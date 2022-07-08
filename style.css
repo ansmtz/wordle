@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+}
+
+.gameboard {
+  width: 100%;
+  height: 60vh;
+}
+
+.keyboard-section {
+  height: 30vh;
+}
+
+.grid {
+  display: grid;
+  width: 90%;
+  margin: 0 auto;
+  height: 100%;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(6, 1fr);
+  align-content: stretch;
+  justify-content: stretch;
+  gap: .2rem;
+}
+
+.grid-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background: #DADADA;
+  border-radius: .4rem;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.keyboard {
+  padding: .5rem;
+  display: grid;
+  height: 100%;
+  grid-template-columns: repeat(12, 1fr);
+  gap: .2rem;
+}
+
+.key, .key-large {
+  border: 1px solid orange;
+  text-align: center;
+}
+
+.key-large {
+  grid-column: span 3;
+}
+
+.key-check {
+  grid-column: 1/-1;
+  align-self: stretch;
+}
+
+.key, .key-large, .key-check {
+  background: #fff;
+  border-radius: .4rem;
+  border: 1px solid #dcdbdb;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.25);
+  text-transform: uppercase;
+}
+
+.green {
+  background-color: green;
+  color: #fff;
+  transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) .5s;
+}
+
+.yellow {
+  background-color: #eec83b;
+  color: #fff;
+  transition: all cubic-bezier(0.175, 0.885, 0.32, 1.275) .5s;
+}
