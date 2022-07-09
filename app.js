@@ -65,7 +65,7 @@ checkButton.addEventListener("click", ()=>{
 document.querySelector(".key-large").addEventListener("click", (e) => {
     userWord = userWord.split("").splice(0, userWord.length - 1).join("");
     gameboard[attempt][position-1].innerText = "";
-    if(position > 1) {
+    if(position > 0) {
         position -= 1;
     }
     console.log(userWord);
