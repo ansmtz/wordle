@@ -2,6 +2,7 @@ const boxes = document.querySelectorAll(".grid-box");
 const checkButton = document.querySelector(".key-check");
 const grid = document.querySelector(".grid");
 const gameboard = [];
+const words = ["рамка", "лавка", "мусор"];
 
 for(let i = 6; i > 0; --i){
     const row = [];
@@ -19,7 +20,8 @@ for(let row of gameboard){
     }
 };
 
-const generatedWord = "парта";
+const generatedWord = words[Math.floor(Math.random()*words.length)];
+console.log(generatedWord);
 const hashMap = {};
     const arr = generatedWord.split("");
     for(let i in arr){
