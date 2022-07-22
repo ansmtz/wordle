@@ -54,7 +54,7 @@ function checkWord(userWord, generatedWord){
         console.log("Слово угадано", attempt+1);
         isGameOver = true;
     } else if(userWord !== generatedWord && attempt === 5){
-        console.log("Игра окончена");
+        alert("Игра окончена " + generatedWord);
         isGameOver = true;
     }
 };
